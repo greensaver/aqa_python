@@ -30,7 +30,7 @@ print(type(userString), userString)
 userNum_1 = input("Після введення числа натискаємо Enter \n")
 userNum_2 = input("")
 print("Сума:", int(userNum_1) + int(userNum_2))
-print("Конкатенація:" userNum_1 + userNum_2)
+print("Конкатенація:", userNum_1 + userNum_2)
 
 # 6 Вік користувача:
 # Запитати у користувача його рік народження, ім'я та який зараз рік (три змінні)
