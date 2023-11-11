@@ -20,17 +20,51 @@
 
 user_str = input("Введіть список продуктів через пробіл (спикок не може бути меньшим 5ти) \n").replace(",", "").title()
 prod_list = user_str.split()
-print(type(prod_list))
+# print(type(prod_list))
 
 if len(prod_list) < 5:
     print("ви ввели меньше 5ти продуктів")
     exit()
 
-print("Купили:", prod_list.pop(0), "\n В кошику:", prod_list)
-print("Купили:", prod_list.pop(0), "\n В кошику:", prod_list)
-print("Купили:", prod_list.pop(0), "\n В кошику:", prod_list)
-print("Купили:", prod_list.pop(0), "\n В кошику:", prod_list)
-print("Купили:", prod_list.pop(0), "\n В кошику:")
+print("зараз є ось такі продукти в вашому списку:", prod_list)
+
+q = int(input("введіть номер продуктів який купили для того що б видалити \n"))
+if q >= 1 and q <= len(prod_list):
+    print("Видаленно:", prod_list.pop(q-1))
+else:
+    print("нема такого, спобуйте ще раз")
+
+print("зараз є ось такі продукти в вашому списку:", prod_list)
+
+q = int(input("введіть номер продуктів який купили для того що б видалити \n"))
+if q >= 1 and q <= len(prod_list):
+    print("Видаленно:", prod_list.pop(q-1))
+else:
+    print("нема такого, спобуйте ще раз")
+
+print("зараз є ось такі продукти в вашому списку:", prod_list)
+
+q = int(input("введіть номер продуктів який купили для того що б видалити \n"))
+if q >= 1 and q <= len(prod_list):
+    print("Видаленно:", prod_list.pop(q-1))
+else:
+    print("нема такого, спобуйте ще раз")
+
+print("зараз є ось такі продукти в вашому списку:", prod_list)
+
+q = int(input("введіть номер продуктів який купили для того що б видалити \n"))
+if q >= 1 and q <= len(prod_list):
+    print("Видаленно:", prod_list.pop(q-1))
+else:
+    print("нема такого, спобуйте ще раз")
+
+print("зараз є ось такі продукти в вашому списку:", prod_list)
+
+q = int(input("введіть номер продуктів який купили для того що б видалити \n"))
+if q >= 1 and q <= len(prod_list):
+    print("Видаленно:", prod_list.pop(q-1))
+else:
+    print("нема такого, спобуйте ще раз")
 
 if len(prod_list) == 0:
     print("вже порожньо")
@@ -56,33 +90,33 @@ else:
 # Бажаю вам успіхів в виконанні завдання. Не забутьте скористатись виправленням синтаксису в кінці задачі і перевірити
 # чи вона у вас працює.
 
-user_shoping = input("Яка вартість покупок? (вводимо через пробіл) \n").replace(",", ".").split()
-user_shoping = [float(i) for i in user_shoping]
-user_sum = sum(user_shoping)
-print(user_sum)
-user_tax = user_sum * (6.5 / 100) + user_sum
-
-user_coupon = input("чи є в користувача купон на знижку? (так/ні) \n").lower()
-if user_coupon == "так":
-   sum_or_percent = input("це на суму чи на відсоток? (суму/відсоток) \n").lower()
-   if sum_or_percent == "суму":
-       coupon_sum = float(input("на яку суму? \n"))
-       user_tax = user_tax - coupon_sum
-       print("До сплати:", round(user_tax, 2))
-   elif sum_or_percent == "відсоток":
-       coupon_percent = float(input("на який відсоток? \n"))
-       user_tax = user_tax - (user_tax * (coupon_percent / 100))
-
-       print("До сплати:", round(user_tax, 2))
-   else:
-       print("не зрозуміло суму чи відсоток, спробуйте ще раз")
-
-user_tax_rounded = round(user_tax, 0)
-user_sum_with_tax = round(user_tax, 2)
-rest = user_sum_with_tax - round(user_tax_rounded, 0)
-
-if rest > 0.44:
-    user_tax_rounded = user_tax_rounded + 1
-
-print("Тоді до сплати:", user_tax_rounded)
+# user_shoping = input("Яка вартість покупок? (вводимо через пробіл) \n").replace(",", ".").split()
+# user_shoping = [float(i) for i in user_shoping]
+# user_sum = sum(user_shoping)
+# print(user_sum)
+# user_tax = user_sum * (6.5 / 100) + user_sum
+#
+# user_coupon = input("чи є в користувача купон на знижку? (так/ні) \n").lower()
+# if user_coupon == "так":
+#    sum_or_percent = input("це на суму чи на відсоток? (суму/відсоток) \n").lower()
+#    if sum_or_percent == "суму":
+#        coupon_sum = float(input("на яку суму? \n"))
+#        user_tax = user_tax - coupon_sum
+#        print("До сплати:", round(user_tax, 2))
+#    elif sum_or_percent == "відсоток":
+#        coupon_percent = float(input("на який відсоток? \n"))
+#        user_tax = user_tax - (user_tax * (coupon_percent / 100))
+#
+#        print("До сплати:", round(user_tax, 2))
+#    else:
+#        print("не зрозуміло суму чи відсоток, спробуйте ще раз")
+#
+# user_tax_rounded = round(user_tax, 0)
+# user_sum_with_tax = round(user_tax, 2)
+# rest = user_sum_with_tax - round(user_tax_rounded, 0)
+#
+# if rest > 0.44:
+#     user_tax_rounded = user_tax_rounded + 1
+#
+# print("Тоді до сплати:", user_tax_rounded)
 
