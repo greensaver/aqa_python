@@ -9,9 +9,10 @@ dict_calc = {"+": [], "-": [], "/": [], "*": []}
 for i in nums_for_calc:
     for j in nums_for_calc:
         # dict_calc = {"+": i + j, "-": [i - j], "/": [i / j], "*": [i * j]}
-        dict_calc["+"].append(i + j)
-        dict_calc["-"].append(i - j)
-        dict_calc["/"].append(i / j)
-        dict_calc["*"].append(i * j)
-user_mess = input("\n")
+        dict_calc["+"].append(str(i) + "+" + str(j) + "=" + str(i + j))
+        dict_calc["-"].append(str(i) + "-" + str(j) + "=" + str(i - j))
+        dict_calc["/"].append(str(i) + "/" + str(j) + "=" + str(i / j))
+        dict_calc["*"].append(str(i) + "*" + str(j) + "=" + str(i * j))
+user_mess = input("Введіть знак множення або додавання або ділення або віднімання, буде прораховано "
+                  "від 2 до 9(включно) \n")
 print(dict_calc[user_mess])
