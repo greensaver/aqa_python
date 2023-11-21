@@ -12,7 +12,7 @@
 number_1 = input("Після введення числа натискаємо Enter \n")
 number_2 = input("")
 
-def foo(inp_1: int | str, inp_2: int | str):
+def foo(inp_1: str, inp_2: str):
     result_1 = int(inp_1) + int(inp_2)
     result_2 = inp_1 + inp_2
     return result_1, result_2
@@ -28,14 +28,14 @@ print("Сума:", foo(number_1, number_2))
 nums_for_calc = [2, 3, 4, 5, 6, 7, 8, 9]
 dict_calc = {"+": [], "-": [], "/": [], "*": []}
 
-def calc_sum(i, j):
-    return str(i) + "+" + str(j) + "=" + str(i + j)
-def calc_minus(i, j):
-    return str(i) + "-" + str(j) + "=" + str(i - j)
-def calc_multiply(i, j):
-    return str(i) + "*" + str(j) + "=" + str(i * j)
-def calc_divide(i, j):
-    return str(i) + "/" + str(j) + "=" + str(i / j)
+def calc_sum(i : int, j : int):
+    return f"{str(i)} + {str(j)} = {str(i + j)}"
+def calc_minus(i : int, j : int):
+    return f"{str(i)} - {str(j)} = {str(i - j)}"
+def calc_multiply(i : int, j : int):
+    return f"{str(i)} * {str(j)} = {str(i * j)}"
+def calc_divide(i : int, j : int):
+    return f"{str(i)} / {str(j)} = {str(i / j)}"
 
 def fill_dict(x: str):
     for i in nums_for_calc:
