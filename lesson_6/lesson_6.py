@@ -12,21 +12,12 @@
 number_1 = input("Після введення числа натискаємо Enter \n")
 number_2 = input("")
 
-def foo(inp_1, inp_2):
+def foo(inp_1: int | str, inp_2: int | str):
     result_1 = int(inp_1) + int(inp_2)
     result_2 = inp_1 + inp_2
     return result_1, result_2
 
 print("Сума:", foo(number_1, number_2))
-
-# def foo():
-#     x = input("Після введення числа натискаємо Enter \n")
-#     y = input("")
-#     result_1 = int(x) + int(y)
-#     result_2 = x + y
-#     return result_1, result_2
-#
-# print("Сума:", foo())
 
 # LESSON_5 CASE_1 Зробіть словник де буде табличка множення додавання ділення і віднімання чисел від 2 до 9(включно).
 # (так як робили на уроці). Ці значення запишіть в словник з відповідними ключами "+", "-", "/", "*"
@@ -46,13 +37,17 @@ def calc_multiply(i, j):
 def calc_divide(i, j):
     return str(i) + "/" + str(j) + "=" + str(i / j)
 
-for i in nums_for_calc:
-    for j in nums_for_calc:
-        dict_calc["+"].append(calc_sum(i, j))
-        dict_calc["-"].append(calc_minus(i, j))
-        dict_calc["/"].append(calc_multiply(i, j))
-        dict_calc["*"].append(calc_multiply(i, j))
+def fill_dict(x: str):
+    for i in nums_for_calc:
+        for j in nums_for_calc:
+            dict_calc["+"].append(calc_sum(i, j))
+            dict_calc["-"].append(calc_minus(i, j))
+            dict_calc["/"].append(calc_multiply(i, j))
+            dict_calc["*"].append(calc_multiply(i, j))
 
-user_mess = input("Введіть знак множення або додавання або ділення або віднімання, буде прораховано "
-                  "від 2 до 9(включно) \n")
-print(dict_calc[user_mess])
+    return dict_calc[x]
+
+print(fill_dict("+"))
+print(fill_dict("-"))
+print(fill_dict("*"))
+print(fill_dict("/"))
