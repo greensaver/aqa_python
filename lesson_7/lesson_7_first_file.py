@@ -5,7 +5,7 @@
 
 # list_1 = [34, 456, 11, 12, -100, 77, 100, 35, 100.0, 100]
 
-def foo_1(x: list[int]) -> list[int]:
+def sort_list_increase(x: list[int]) -> list[int]:
     return sorted(x, reverse=False)
 
 # print(foo_1(list_1))
@@ -16,7 +16,7 @@ def foo_1(x: list[int]) -> list[int]:
 
 # list_2 = [34, 456, 11, 12, -100, 77, 100, 35, 100.0, 100]
 
-def foo_2(x: list[int]) -> list[int]:
+def sort_list_decrease(x: list[int]) -> list[int]:
     return sorted(x, reverse=True)
 
 # print(foo_2(list_2))
@@ -25,7 +25,7 @@ def foo_2(x: list[int]) -> list[int]:
 
 # list_3 = ['груша', 'грушаa', 'банан',  'яблуко', 'диня', "слива", "апельсин", "фу"]
 
-def foo_3(x: list[str]) -> list[str]:
+def sort_list_words_increase(x: list[str]) -> list[str]:
     return sorted(x, key=len)
 
 # print(foo_3(list_3))
