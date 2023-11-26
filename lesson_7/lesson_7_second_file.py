@@ -7,9 +7,6 @@
 
 from lesson_7_first_file import sort_list_increase, sort_list_decrease, sort_list_words_increase
 
-# list_1 = [34, 456, 11, 12, -100, 77, 100, 35, 100.0, 100]
-# list_2 = ['груша', 'грушаa', 'банан', 'яблуко', 'диня', "слива", "апельсин", "фу"]
-
 def test_sort_list_increase():
     assert sort_list_increase([34, 456, 11, 12, -100, 77, 100, 35, 100.0, 100]) == [-100, 11, 12, 34, 35, 77, 100, 100.0, 100, 456]
 
