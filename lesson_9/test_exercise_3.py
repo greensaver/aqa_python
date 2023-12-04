@@ -24,4 +24,4 @@ list_test = [(3, 3, 3, 9), (-3, 4, 0, 1), (-3, -1, -4, -8)]
 
 @pytest.mark.parametrize("numb_1, numb_2, numb_3, result", list_test)
 def test_solution_3(numb_1, numb_2, numb_3, result):
-    assert add_three_numbers(numb_1, numb_2, numb_2) == result
+    assert add_three_numbers(numb_1, numb_2, numb_3) == result
