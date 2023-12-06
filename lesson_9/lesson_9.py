@@ -4,15 +4,18 @@
 # трьома методами
 # 4) перепишіть декоратор який заміряє час з уроку в домашку, можете його поклацати, як він працює
 
+import time
+from datetime import datetime
+
 # 2)
-def check_ZeroDivisionError(x):
+def check_zero_division_error(x):
     try:
         print(x / 0)
     except ZeroDivisionError:
         print("на нуль не ділиться в пайтоні")
         exit()
 
-print(check_ZeroDivisionError(1 + 10))
+print(check_zero_division_error(1 + 10))
 
 # 3)
 def add_three_numbers(number_1: int | float, number_2: int | float, number_3: int | float) -> int | float:
@@ -20,8 +23,6 @@ def add_three_numbers(number_1: int | float, number_2: int | float, number_3: in
     return result
 
 # 4)
-from datetime import datetime
-
 def time_wrapper(f):
     def wrapper(*arg, **kwarg):
         start = datetime.now()
@@ -31,7 +32,6 @@ def time_wrapper(f):
         return result
     return wrapper
 
-import time
 @time_wrapper
 def short_sleep():
     print("short_sleep")
