@@ -45,10 +45,3 @@ def add_three_numbers_test(number_1: int | float, number_2: int | float, number_
     result = add_three_numbers(number_1, number_2, number_3)
     return result
 
-# with open("text.txt", "w") as file:  # w - write затирає старий файл.
-#     file.write("Hello")
-
-
-# with open("tex2t.txt", "a") as file:  # a - дозапис файлу.
-#     file.write("\n")
-#     file.write("++-=-=-=-=-")
