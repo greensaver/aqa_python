@@ -18,31 +18,50 @@
 # Створіть два обьєта класа в якому ви це реалізували і зробіть перевірку що все працює
 
 
-class Person:
-    def __init__(self, name, age, smile):
-        self.name = name
-        self.age = age
-        self.smile = smile
+class A:
+    def __init__(self, text):
+        self.text = text
 
-    def __str__(self):
-        return f" Name: {self.name} \n Age: {self.age} \n Face: {self.smile} "
+    def __bool__(self):
+        if len(self.text) < 20:
+            return False
+        return True
 
-    def __eq__(self, other):
-        print(abs(len(self.name) - len(other.name)))
+    def __eq__(self, other):  # ==
+        print(abs(len(self.text) - len(other.text)))
         if not isinstance(other, type(self)):
             raise TypeError
-        elif abs(len(self.name) - len(other.name)) < 10:
+        elif abs(len(self.text) - len(other.text)) < 10:
             return True
         else:
             return False
 
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
     def __ne__(self, other):
-        return self.name != other.name, self.age != other.age, self.smile != other.smile
+        if not isinstance(other, type(self)):
+            raise TypeError
+        else:
+            return self.name != other.name or self.age != other.age
+
+    def __eq__(self, other):
+        if not isinstance(other, type(self)):
+            raise TypeError
+        else:
+            return self.name == other.name and self.age == other.age
 
 
-obj_1 = Person("Serhii", 18, "😎")
-obj_2 = Person("_loGin", 18, "0_o")
+obj_1 = Person(12, 12)
+obj_2 = Person("12", 12)
+a = A(12)
 
-print(obj_1)
 print(obj_1 != obj_2)
-print(obj_2 == obj_1)
+print(obj_1 == obj_2)
+print(obj_1 == a)
+
+obj_2.name = "qweqweqwe"
+print(obj_2.name != obj_1.name)
