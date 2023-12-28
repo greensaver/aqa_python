@@ -19,3 +19,4 @@ def fixture_search_bible(request):
     request.cls.response = response
     request.cls.status_code = status_code
     yield response, status_code
+

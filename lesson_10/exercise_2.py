@@ -11,6 +11,7 @@
 # функція з минулого уроку
 # функція що записую текст
 # і декоратор
+from __future__ import annotations
 
 
 def add_three_numbers(number_1: int | float, number_2: int | float, number_3: int | float) -> int | float:

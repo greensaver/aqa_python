@@ -27,7 +27,7 @@ obj_1.say_hello()
 obj_1.say_list_grade()
 
 obj_2 = StudentClass()
-obj_2.name = "Sehii"
+obj_2.name = "Serhii"
 obj_2.say_hello()
 obj_2.list_grade = [2, 3, 1, 5, 4]
 obj_2.say_list_grade()
