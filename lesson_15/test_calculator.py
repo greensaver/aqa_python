@@ -15,16 +15,11 @@ class TestCalculator:
 
     @classmethod
     def setup_class(cls):
-        cls.calc = Calculator()
-        print("\n-------------------------------START-------------------------------\n")
-
-
-    @classmethod
-    def teardown_class(cls):
-        finish_time = datetime.now().strftime("%H:%M:%S")
+        finish_time = datetime.now().strftime("%H:%M:%S:%f")
         with open('finish.txt', 'a') as file:
-            file.write(f"Finish Time {finish_time}\n---------------------\n")
-        print("\n-------------------------------END-------------------------------\n")
+            file.write(f"Begin time {finish_time}\n")
+        cls.calc = Calculator()
+        print("\n-------------------------------BEGIN-------------------------------\n")
 
     @pytest.mark.parametrize("numb_1, numb_2, result", [
         pytest.param(3, 3, 6),
@@ -43,3 +38,10 @@ class TestCalculator:
         pytest.param(-3, -1, 3.0)])
     def test_divide(self, numb_1, numb_2, result):
         assert self.calc.divide(numb_1, numb_2) == result
+
+    @classmethod
+    def teardown_class(cls):
+        finish_time = datetime.now().strftime("%H:%M:%S:%f")
+        with open('finish.txt', 'a') as file:
+            file.write(f"End time {finish_time}\n---------------------------\n")
+        print("\n-------------------------------END-------------------------------\n")
