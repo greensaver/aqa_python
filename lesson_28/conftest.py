@@ -15,4 +15,3 @@ def chrome_class(request):
     request.cls.driver = driver
     yield driver
     driver.quit()
-

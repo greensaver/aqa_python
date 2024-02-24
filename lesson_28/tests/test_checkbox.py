@@ -1,5 +1,3 @@
-import time
-
 import pytest
 from lesson_28.src.pages.page_checkbox import CheckboxPage
 from lesson_28.conftest import chrome_class
