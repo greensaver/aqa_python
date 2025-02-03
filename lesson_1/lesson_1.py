@@ -127,3 +127,4 @@ userSalaryMonth = int(input("Введіть зп за 3и місяці \n"))
 userSalaryTax = float(input("Введіть сплачувальний відсоток \n"))
 print("Потрібно сплатити:", (userSalaryMonth * (userSalaryTax / 100)) + 1474, "Податків з урахуванням ЄСВ(4422), 1474 грн.")
 # ADD TSW-42
+# tsw-42_V2
