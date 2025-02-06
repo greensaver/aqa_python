@@ -2,7 +2,6 @@ import pytest
 from lesson_29.src.pages.page_rozetka import RozetkaPage
 from lesson_29.conftest import chrome_class
 
-
 @pytest.mark.usefixtures("chrome_class")
 class TestRozetkaPage:
     def setup(self, method):
